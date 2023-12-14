@@ -5,7 +5,7 @@ import { HeroList } from '../'
 const SearchWidget = () => {
     const [inputValue,setInputValue ] = useState("")
     const [searchString, setSearchString] = useState("")
-    const [showData, setShowData]= useState([])
+    const [heroData, setHeroData]= useState([])
 
     const handleInput = (e) => {
         const newInput = e.target.value
@@ -19,7 +19,7 @@ const SearchWidget = () => {
     }
     useEffect(() => {
         const searchAPI = async () => {
-            const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/search/name?q=${searchString}`)
+            const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/search/${searchString}`)
             const heros = data.map(s => s.hero)
             setHeroData(heros)
         }

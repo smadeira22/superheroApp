@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 const HomePage = () => {
   return (
     <>
-    <h1>Welcome to Superhero</h1>
+    <h1>Welcome to the Superheros website search</h1>
     <em>wowwwww</em>
     <ul>
       <li>
-      <Link to="/superheros">Explore Superhero</Link>
+        <Link to="/search">Search your favourites super hero</Link>
       </li>
       <li>
-      <Link to="/search">Search your favourites super hero</Link>
+        <Link to="/superheros/:id">Check most popular superheros</Link>
       </li>
     </ul>
     </>

@@ -3,7 +3,7 @@ import React from 'react'
 const GalleryImage = ({ Hero }) => {
   return (
     <div className="gallery-image">
-        <img src={Hero.image.medium} alt={Hero.name}/>
+        <img src={Hero.url} alt={Hero.name}/>
     </div>
   )
 }

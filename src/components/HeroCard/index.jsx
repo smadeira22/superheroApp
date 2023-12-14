@@ -1,16 +1,14 @@
 import React from 'react'
 
-const HeroCard = ({ show }) => {
+const HeroCard = ({ results }) => {
   return (
     <div className='show-card'>
         <div>
-            <img src={show.image.medium} alt={show.name} />
+            <img src={results.image.url} alt="ola" />
         </div>
         <div>
-            <div>{show.rating.average ? <span>{show.rating.average}/10</span> :""}</div>
-            <h2>{show.name}</h2>
-            <em>{show.language}, {show.premiered}</em>
-            <div dangerouslySetInnerHTML={{__html: show.summary}}></div>
+            <div>{results.name}</div>
+            <em>{results.alignment}</em>
         </div>
     </div>
   )

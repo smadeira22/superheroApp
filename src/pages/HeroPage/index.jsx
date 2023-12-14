@@ -5,19 +5,20 @@ import axios from "axios"
 import { HeroCard } from '../../components'
 
 const HeroPage = () => {
-  const [hero, setHero] = useState({ image: {}})
+  const [results, setResults] = useState({ image: {}})
   const { id } = useParams()
   useEffect(() => {
     const displayHero = async () => {
-      const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/${id}/image`)
-      setHero(data)
+      const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/1`)
+      console.log(data)
+      setResults(data)
     }
     displayHero()
   }, [])
  
   return (
     
-   <HeroCard hero={hero} />
+   <HeroCard results={results} />
     
   )
 }
