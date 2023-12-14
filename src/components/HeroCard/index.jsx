@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShowCard = ({ show }) => {
+const HeroCard = ({ show }) => {
   return (
     <div className='show-card'>
         <div>
@@ -16,6 +16,6 @@ const ShowCard = ({ show }) => {
   )
 }
 
-export default ShowCard
+export default HeroCard
 
 /* <div dangerouslySetInnerHTML={{__html: show.summary}}*/ 

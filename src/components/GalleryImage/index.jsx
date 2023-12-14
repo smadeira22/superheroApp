@@ -1,9 +1,9 @@
 import React from 'react'
 
-const GalleryImage = ({ show }) => {
+const GalleryImage = ({ Hero }) => {
   return (
     <div className="gallery-image">
-        <img src={show.image.medium} alt={show.name}/>
+        <img src={Hero.image.medium} alt={Hero.name}/>
     </div>
   )
 }

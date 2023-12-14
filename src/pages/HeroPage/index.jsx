@@ -2,24 +2,24 @@ import React,{ useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import axios from "axios"
 
-import { ShowCard } from '../../components'
+import { HeroCard } from '../../components'
 
-const ShowPage = () => {
-  const [show, setShow] = useState({ image: {}, rating: {}})
+const HeroPage = () => {
+  const [hero, setHero] = useState({ image: {}})
   const { id } = useParams()
   useEffect(() => {
-    const displayShow = async () => {
+    const displayHero = async () => {
       const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`)
-      setShow(data)
+      setHero(data)
     }
-    displayShow()
+    displayHero()
   }, [])
  
   return (
     
-   <ShowCard show={show} />
+   <HeroCard hero={hero} />
     
   )
 }
 
-export default ShowPage
+export default HeroPage
