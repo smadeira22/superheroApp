@@ -3,9 +3,6 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { HeroCard } from '../../components';
-import { HeroCard } from '../../components'
-
-
 
 const HeroPage = () => {
   const [heroes, setHeroes] = useState([]);
@@ -13,7 +10,7 @@ const HeroPage = () => {
 
   useEffect(() => {
     const displayHeroes = async () => {
-      const heroIds = [1, 2, 3, 4, 5]; 
+      const heroIds = [69, 612, 3, 4, 303]; 
       const promises = heroIds.map(async (heroId) => {
         const { data } = await axios.get(`https://superheroapi.com/api.php/2859083194232848/${heroId}`);
         return data;
