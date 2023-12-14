@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
-import { ShowList }from '../'
+import { HeroList } from '../'
 
 const SearchWidget = () => {
     const [inputValue,setInputValue ] = useState("")
@@ -31,7 +31,7 @@ const SearchWidget = () => {
         <input type="text" value={inputValue} onChange={handleInput} required />
         <input type="submit" value="Search" />
     </form>
-    <ShowList showData={showData}/>
+    <HeroList showData={showData}/>
     </>
   )
 }
