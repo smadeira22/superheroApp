@@ -19,7 +19,7 @@ const SearchWidget = () => {
     }
     useEffect(() => {
         const searchAPI = async () => {
-            const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/search/${searchString}`)
+            const { data } = await axios.get(`https://superheroapi.com/api.php/2859083194232848/search/${searchString}`)
             const heros = data.map(s => s.hero)
             setHeroData(heros)
         }

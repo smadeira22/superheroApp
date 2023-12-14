@@ -10,7 +10,7 @@ const HeroGallery = () => {
 
     useEffect(() => {
         const displayHeros = async () => {
-            const {data} = await axios.get("https://superheroapi.com/api/2859083194232848")
+            const {data} = await axios.get("https://superheroapi.com/api.php/2859083194232848")
             console.log(data)
             setHeros(data)
         }
