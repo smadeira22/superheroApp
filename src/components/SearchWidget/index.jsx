@@ -19,9 +19,9 @@ const SearchWidget = () => {
     }
     useEffect(() => {
         const searchAPI = async () => {
-            const { data } = await axios.get(`https:/api.tvmaze.com/search/shows?q=${searchString}`)
-            const shows = data.map(s => s.show)
-            setShowData(shows)
+            const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/search/name?q=${searchString}`)
+            const heros = data.map(s => s.hero)
+            setHeroData(heros)
         }
         searchAPI()
     }, [searchString])
@@ -31,7 +31,7 @@ const SearchWidget = () => {
         <input type="text" value={inputValue} onChange={handleInput} required />
         <input type="submit" value="Search" />
     </form>
-    <HeroList showData={showData}/>
+    <HeroList heroData={heroData}/>
     </>
   )
 }

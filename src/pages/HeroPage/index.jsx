@@ -9,7 +9,7 @@ const HeroPage = () => {
   const { id } = useParams()
   useEffect(() => {
     const displayHero = async () => {
-      const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`)
+      const { data } = await axios.get(`https://superheroapi.com/api/2859083194232848/${id}/image`)
       setHero(data)
     }
     displayHero()
