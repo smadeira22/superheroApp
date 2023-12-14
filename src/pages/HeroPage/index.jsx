@@ -3,14 +3,20 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { HeroCard } from '../../components';
+import { HeroCard } from '../../components'
+
+
 
 const HeroPage = () => {
   const [heroes, setHeroes] = useState([]);
   const { id } = useParams();
 
+  const [results, setResults] = useState({ image: {}})
+  const { id } = useParams()
+
   useEffect(() => {
     const displayHeroes = async () => {
-      const heroIds = [1, 2, 3, 4, 5]; // Specify the hero IDs you want to fetch
+      const heroIds = [1, 2, 3, 4, 5]; 
       const promises = heroIds.map(async (heroId) => {
         const { data } = await axios.get(`https://superheroapi.com/api.php/2859083194232848/${heroId}`);
         return data;
