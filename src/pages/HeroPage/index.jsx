@@ -11,9 +11,6 @@ const HeroPage = () => {
   const [heroes, setHeroes] = useState([]);
   const { id } = useParams();
 
-  const [results, setResults] = useState({ image: {}})
-  const { id } = useParams()
-
   useEffect(() => {
     const displayHeroes = async () => {
       const heroIds = [1, 2, 3, 4, 5]; 
