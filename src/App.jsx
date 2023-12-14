@@ -11,11 +11,7 @@ const App = () => {
     <Routes>
       <Route path='' element={<Header />}>
         <Route index element={<Pages.HomePage/>}/>
-        <Route path='/superheros'>
-            <Route index element={<Pages.HerosPage/>}/>
-            <Route path=":id" element={<Pages.HeroPage/>}/>
-        </Route>
-        <Route path="/superhero1" element={<Pages.HeroPage/>}/>
+        <Route path='/superheros' element={<Pages.HeroPage/>}/>
         <Route path="/search" element={<Pages.SearchPage/>}/>
         <Route path="*" element={<Pages.NotFoundPage/>}/>     
       </Route>

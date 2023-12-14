@@ -11,7 +11,7 @@ const HomePage = () => {
         <Link to="/search">Search your favourites super hero</Link>
       </li>
       <li>
-        <Link to="/superheros/:id">Check most popular superheros</Link>
+        <Link to="/superheros">Check most popular superheros</Link>
       </li>
     </ul>
     </>
